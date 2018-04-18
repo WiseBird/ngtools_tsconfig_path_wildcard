@@ -1,4 +1,5 @@
-import {Component} from '@angular/core';
+import {Component, ElementRef} from '@angular/core';
+import 'brace';
 
 @Component({
     selector: 'app-root',
@@ -7,4 +8,11 @@ import {Component} from '@angular/core';
 })
 export class AppComponent {
     title = 'app component!';
+
+    editor: AceAjax.Editor;
+
+    constructor(private elementRef: ElementRef) {
+        let el = elementRef.nativeElement;
+        this.editor = ace['edit'](el);
+    }
 }
