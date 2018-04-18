@@ -13,6 +13,7 @@ let postcssLoader = {
 };
 
 module.exports = {
+    mode: 'development',
     entry: './src/index.ts',
     output: {
         path: path.resolve(__dirname, 'bundle'),
@@ -71,5 +72,9 @@ module.exports = {
             inject: true,
             filename: "bundle.html",
         }),
-    ]
+    ],
+    devtool: "source-maps",
+    performance: {
+        hints: false
+    },
 };
