@@ -1,0 +1,1 @@
+Repo contains reproduction of the problem when @ngtools can't build app if templateUrl or styleUrl uses ts mapping path.
