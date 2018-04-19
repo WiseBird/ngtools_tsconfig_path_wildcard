@@ -29,7 +29,6 @@ module.exports = {
             '.ts',
             '.js',
             '.html',
-            '.scss',
         ],
         alias: {
             "lib": path.resolve('./lib'),
@@ -45,20 +44,11 @@ module.exports = {
         rules: [
             {test: /.ts$/, use: '@ngtools/webpack'},
             {
-                test: /(app|behavox_sdk|behavox_core|plugins).*\.(css|scss)$/,
-                use: [
-                    'to-string-loader',
-                    'css-loader',
-                ],
-            },
-            // { test: /\.css$/,  use: 'raw-loader' },
-            {
                 test: /\.html$/,
                 use: [
                     'html-loader',
                 ],
             },
-            {test: /\.(png|ico|gif)$/, loader: "file-loader?name=bundle.[name].[ext]"}
         ]
     },
     plugins: [
