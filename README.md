@@ -1,1 +1,1 @@
-Repo contains reproduction of the problem when @ngtools can't build app if templateUrl or styleUrl uses ts mapping path.
+Repo contains reproduction of the problem when @ngtools wrongly overwrites webpack's request: '!!webpack amd define' -> '.../node_modules/!!webpack amd define'.
